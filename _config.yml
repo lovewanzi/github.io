@@ -7,8 +7,8 @@ description: "大老师和小丸子|一子麻辣烫|一女该娜娜"
 
 # if it's an external image, update below for true
 # better with square images
-external-image: true
-picture: assets/images/pic1.jpg
+external-image: false
+picture: assets/images/wanzi.jpg
 
 # your site color theme, true for dark theme, 
 # false to light theme, auto to switch with system.
@@ -34,26 +34,26 @@ disqus:
   categories: [blog, project] # only show disqus for posts that have these categories
 
 # if you don't have any of social below, comment the line
-facebook: aaa
-twitter: aaa
-instagram: aaa
-linkedin: aaa
+# facebook: myfacebook
+# twitter: mytwitter
+# instagram: myinstagram
+# linkedin: mylinkedin
 github: lovewanzi/lovewanzi.github.io.git
 email: hsiungrui@gmail.com
 
 authors:
   johndoe:
-    name: "大老师"
+    name: John Doe
     bio: A Man who travels the world eating noodles
-    external-image: true
-    picture: assets/images/pic1.jpg
-    twitter: aaa
+    external-image: false
+    picture: assets/images/profile.jpg
+    twitter: johndoe
   jamesfoster:
-    name: "小丸子"
+    name: James Foster
     bio: A Man who develops software with coffee
-    external-image: true
-    picture: assets/images/pic1.jpg
-    twitter: aaa
+    external-image: false
+    picture: assets/images/james.jpg
+    twitter: jamesfoster
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -109,7 +109,6 @@ compress_html:
 
 exclude:
   [
-    "README.md",
     "Gemfile",
     "Gemfile.lock",
     "FAQ.md",
