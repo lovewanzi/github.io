@@ -8,7 +8,7 @@ description: "大老师和小丸子|一子麻辣烫|一女该娜娜"
 # if it's an external image, update below for true
 # better with square images
 external-image: true
-picture: assets/images/pic.jpg
+picture: assets/images/pic1.jpg
 
 # your site color theme, true for dark theme, 
 # false to light theme, auto to switch with system.
@@ -16,8 +16,8 @@ dark-theme: auto
 
 # If you want to include your resume, set to true
 # and specify source (external or local).
-resume: false
-resume-external: false
+resume: true
+resume-external: true
 resume-url: https://google.com/?q=my+resume
 
 url: https://lovewanzi.github.io.git
@@ -46,13 +46,13 @@ authors:
     name: "大老师"
     bio: A Man who travels the world eating noodles
     external-image: true
-    picture: assets/images/pic.jpg
+    picture: assets/images/pic1.jpg
     twitter: aaa
   jamesfoster:
     name: "小丸子"
     bio: A Man who develops software with coffee
     external-image: true
-    picture: assets/images/pic.jpg
+    picture: assets/images/pic1.jpg
     twitter: aaa
 
 # do you want a larger site? change the option below
