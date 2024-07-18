@@ -7,8 +7,8 @@ description: "大老师和小丸子|一子麻辣烫|一女该娜娜"
 
 # if it's an external image, update below for true
 # better with square images
-external-image: false
-picture: assets/images/wanzi.jpg
+external-image: true
+picture: assets/images/wanzi1.jpg
 
 # your site color theme, true for dark theme, 
 # false to light theme, auto to switch with system.
@@ -46,13 +46,13 @@ authors:
     name: John Doe
     bio: A Man who travels the world eating noodles
     external-image: false
-    picture: assets/images/profile.jpg
+    picture: assets/images/wanzi1.jpg
     twitter: johndoe
   jamesfoster:
     name: James Foster
     bio: A Man who develops software with coffee
     external-image: false
-    picture: assets/images/james.jpg
+    picture: assets/images/wanzi1.jpg
     twitter: jamesfoster
 
 # do you want a larger site? change the option below
@@ -109,6 +109,7 @@ compress_html:
 
 exclude:
   [
+    "README.md",
     "Gemfile",
     "Gemfile.lock",
     "FAQ.md",
