@@ -20,7 +20,7 @@ resume: true
 resume-external: true
 resume-url: https://google.com/?q=my+resume
 
-url: https://lovewanzi.github.io.git
+url: https://lovewanzi.github.io
 # your url: https://USERNAME.github.io
 
 permalink: /:title/
@@ -109,7 +109,6 @@ compress_html:
 
 exclude:
   [
-    "README.md",
     "Gemfile",
     "Gemfile.lock",
     "FAQ.md",
