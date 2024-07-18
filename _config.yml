@@ -7,7 +7,7 @@ description: "大老师和小丸子|一子麻辣烫|一女该娜娜"
 
 # if it's an external image, update below for true
 # better with square images
-external-image: true
+external-image: false
 picture: assets/images/wanzi1.jpg
 
 # your site color theme, true for dark theme, 
@@ -45,13 +45,13 @@ authors:
   johndoe:
     name: "大老师"
     bio: "大老师和小丸子|一子麻辣烫|一女该娜娜"
-    external-image: true
+    external-image: false
     picture: assets/images/wanzi2.jpg
     twitter: trump
   jamesfoster:
     name: "大老师"
     bio: "大老师和小丸子|一子麻辣烫|一女该娜娜"
-    external-image: true
+    external-image: false
     picture: assets/images/wanzi3.jpg
     twitter: trump
 
