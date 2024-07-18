@@ -43,17 +43,17 @@ email: hsiungrui@gmail.com
 
 authors:
   johndoe:
-    name: John Doe
-    bio: A Man who travels the world eating noodles
-    external-image: false
-    picture: assets/images/wanzi1.jpg
-    twitter: johndoe
+    name: "大老师"
+    bio: "大老师和小丸子|一子麻辣烫|一女该娜娜"
+    external-image: true
+    picture: assets/images/wanzi2.jpg
+    twitter: trump
   jamesfoster:
-    name: James Foster
-    bio: A Man who develops software with coffee
-    external-image: false
-    picture: assets/images/wanzi1.jpg
-    twitter: jamesfoster
+    name: "大老师"
+    bio: "大老师和小丸子|一子麻辣烫|一女该娜娜"
+    external-image: true
+    picture: assets/images/wanzi3.jpg
+    twitter: trump
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
