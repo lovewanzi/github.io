@@ -72,7 +72,9 @@ read-time: true
 
 # do you want to show the "tags" inside the posts?
 show-tags: true
-
+# Featured Tags
+featured-tags: true                     # 是否使用首页标签
+featured-condition-size: 1              # 相同标签数量大于这个数，才会出现在首页
 # related posts inside a post?
 related: true
 
