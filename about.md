@@ -2,9 +2,9 @@
 title: About
 layout: page
 picture: assets/images/wanzi2.jpg
-header-img: asset/images/new.jpg
+header-img: assets/images/new.jpg
 ---
-![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ picture }}{% endif %})
+![Profile Image]({{ page.image }})
 
 <p>老家四川，新北京人。有一个完美的老婆，长头像那样。两只猫，银渐层叫该娜娜，蓝白叫麻辣烫</p>
 
