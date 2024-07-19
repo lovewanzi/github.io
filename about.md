@@ -1,6 +1,8 @@
 ---
 title: About
 layout: page
+picture: assets/images/wanzi2.jpg
+header-img: asset/images/new.jpg
 ---
 ![Profile Image]({% if site.external-image %}{{ site.picture }}{% else %}{{ site.url }}/{{ site.picture }}{% endif %})
 
@@ -28,4 +30,3 @@ layout: page
 	<li><a href="https://github.com/lovewanzi/sometrash">wanzi</a></li>
 	<li><a href="https://github.com/lovewanzi/sometrash">nana</a></li>
 </ul>
-
