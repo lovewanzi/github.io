@@ -1,0 +1,53 @@
+body {
+  font-size: 14px !important; /* 全局字体大小 */
+}
+
+h1 {
+  font-size: 2.5em !important; /* 一级标题字体大小 */
+}
+
+h2 {
+  font-size: 2em !important; /* 二级标题字体大小 */
+}
+
+h3 {
+  font-size: 1.5em !important; /* 三级标题字体大小 */
+}
+
+/* 选择所有 <code> 元素 */
+code {
+    font-size: 14px !important; /* 调整为你需要的字体大小 */
+}
+
+/* 选择所有 <pre> 元素 */
+pre {
+    font-size: 14px !important; /* 调整为你需要的字体大小 */
+}
+
+/* 选择所有带有 .highlight 类的元素，常用于代码高亮 */
+.highlight {
+    font-size: 14px !important; /* 调整为你需要的字体大小 */
+}
+
+/* 如果你的代码块有特定的类名，比如 .code-block */
+.code-block {
+    font-size: 14px !important; /* 调整为你需要的字体大小 */
+}
+
+/*.toc-container {
+    margin-bottom: 20px !important;
+}
+
+.toc {
+    list-style: none;
+    padding: 0 !important;
+}
+
+.toc a {
+    text-decoration: none;
+    color: #0073e6 !important;
+}
+
+.toc a:hover {
+    text-decoration: underline !important;
+}*/

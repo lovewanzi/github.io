@@ -1,8 +1,7 @@
 ---
 title: About
 layout: page
-picture: assets/images/wanzi2.jpg
-header-img: assets/images/new.jpg
+picture: "/assets/images/wanzi2.jpg"
 ---
 ![Profile Image]({{ page.picture }})
 
