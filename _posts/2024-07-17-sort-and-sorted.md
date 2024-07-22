@@ -1,16 +1,16 @@
 ---
-title: "make it r"
+title: "sort和sorted"
 layout: post
 date: 2024-07-17 22:44
-image: "/assets/images/wanzi2.jpg"
-header-img: "/assets/images/new.jpg"
+picture: "/assets/images/wanzi2.jpg"
+background_image: "/assets/images/background.jpg"
+toc: true
 tag:
-- 随便
-- fuck
-star: true
-category: blog
-author: johndoe
-description: Markdown summary with different options
+- python
+- python语法
+category: python
+author: jams
+description: python的sort和sorted
 ---
 
 ```python
@@ -24,9 +24,7 @@ print(a)
 #排序结果： [6, 4, 2]，会按照计算结果[3, 2, 1]进行排序
 ```
 
-![看看美女]({{ page.image }})
-
-# 1.sort方法**作用**：
+## 1.sort方法作用：
 
 ​	用于对列表进行就地排序（原地排序），即直接修改原列表。
 
@@ -55,7 +53,7 @@ words.sort(reverse=True)
 print(words) # 输出: ['cherry', 'banana', 'apple'] 根据计算长度进行排序，不会改变words的内容
 ```
 
-# 2.sorted函数作用：
+## 2.sorted函数作用：
 
 ​	用于返回一个新的排序后的列表，而不修改原列表。
 
@@ -89,6 +87,7 @@ sorted_words_desc = sorted(words, reverse=True)
 print(sorted_words_desc) # 输出: ['cherry', 'banana', 'apple']
 ```
 
-# 3.总结
+## 3.总结
 
 ​	sort方法用于对列表进行就地排序，不会返回新列表，直接修改原列表。sorted函数返回一个新的排序后的列表，而不修改原列表。两者都支持key和reverse关键字参数用于自定义排序逻辑。
+

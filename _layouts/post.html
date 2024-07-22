@@ -22,65 +22,23 @@ layout: page
 
     body::before {
       content: "" ;
-      position: absolute ;
+      /*position: absolute ;*/
       top: 0 ;
       left: 0 ;
       width: 100% ;
       height: 100% ;
-      background-image: url('{{ page.background_image }}') ;
-      background-size: cover ;
+      background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色覆盖层 */
+      /*background-image: url('{{ page.background_image }}') ;*/
+/*      background-size: cover ;
       background-repeat: no-repeat ;
       background-attachment: fixed ;
-      background-position: center ;
+      background-position: center ;*/
       opacity: 0.5 ;
       z-index: -1 ;
     }
     .title-image {
       max-width: 100% ;
       height: auto ;
-    }
-
-    .container {
-      display: flex ; /* 使用 flex 布局 */
-    }
-
-    .sidebar {
-      position: fixed ; /* 固定在屏幕的最左侧 */
-      width: 250px ; /* 侧边栏宽度 */
-      padding: 20px ;
-      background-color: #F5F5DC ; /* 背景颜色 */
-      border-right: 0px solid #ddd ; /* 边框颜色 */
-      height: 100vh ; /* 高度为视口高度 */
-      overflow-y: auto ; /* 超出时显示滚动条 */
-      box-sizing: border-box ; /* 包含 padding 和 border */
-      z-index: 1000 ; /* 确保侧边栏在内容上层 */
-      left: 0 ; /* 确保侧边栏在屏幕左边 */
-      top: 0 ;
-    }
-
-    .main-content {
-      margin-left: 150px ; /* 确保内容区域有足够空间避免与侧边栏重叠 */
-      padding: 20px ;
-      box-sizing: border-box ; /* 确保 padding 包含在宽度内 */
-    }
-
-    #table-of-contents {
-      margin: 0 ;
-      padding: 0 ;
-    }
-
-    #table-of-contents h2 {
-      font-size: 1.5em ;
-      margin-bottom: 10px ;
-    }
-
-    #table-of-contents ul {
-      list-style-type: none ;
-      padding-left: 0 ;
-    }
-
-    #table-of-contents li {
-      margin: 5px 0 ;
     }
   </style>
 {% endif %}
@@ -106,24 +64,34 @@ layout: page
 
 <div class="container">
     <!-- 侧边栏 -->
-    <aside class="sidebar">
+        <!-- 侧边栏 -->
+    <aside id="sidebar" class="sidebar">
         <div id="table-of-contents">
-          <h2>目录</h2>
-          <ul>
-            {% assign headings = site.content | where: "title", "" %}
-            {% for heading in headings %}
-              <li><a href="#{{ heading.id }}">{{ heading.title }}</a></li>
-            {% endfor %}
-          </ul>
+            <h2>目录</h2>
+            <ul>
+                {% assign headings = content | markdownify | split: '<h' %}
+                {% for heading in headings %}
+                    {% if heading contains '2>' or heading contains '3>' or heading contains '4>' %}
+                        {% assign id = heading | split: 'id="' %}
+                        {% assign id = id[1] | split: '"' %}
+                        {% assign id = id[0] %}
+                        {% assign title = heading | split: '>' %}
+                        {% assign title = title[1] | split: '<' %}
+                        {% assign title = title[0] %}
+                        <li><a href="#{{ id }}">{{ title }}</a></li>
+                    {% endif %}
+                {% endfor %}
+            </ul>
         </div>
     </aside>
-
+    <div id="toggle-button" class="sidebar-toggle">☰</div>
     <!-- 主要内容区域 -->
     <main class="main-content">
         {{ content }}
     </main>
-</div>
 
+</div>
+<script src="assets/js/main.js"></script>
 {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
         {% if page.previous.hidden == false and page.previous.url %}

@@ -1,0 +1,132 @@
+---
+layout: page
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/main.css">
+</head>
+  <style>
+    html, body {
+      height: 100% ;
+      margin: 0 ;
+      padding: 0 ;
+      overflow: hidden;
+    }
+
+    body {
+      position: relative ;
+      background-image: url('/assets/images/background-sub-page.jpg') ;
+      background-size: cover ;
+      background-repeat: no-repeat ;
+      background-attachment: fixed ;
+      background-position: center ;
+    }
+
+    body::before {
+      content: "" ;
+      position: absolute ;
+      top: 0 ;
+      left: 0 ;
+      width: 100% ;
+      height: 100% ;
+      background-image: url('/assets/images/background-sub-page.jpg') ;
+      background-size: cover ;
+      background-color: rgba(0, 0, 0, 0.5); /* 半透明黑色覆盖层 */
+      background-repeat: no-repeat ;
+      background-attachment: fixed ;
+      background-position: center ;
+      opacity: 0.5 ;
+      z-index: -1 ;
+    }
+    .category-page {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: left;
+    }
+    .category-page h1 {
+      display: flex;
+      font-size: 24px;
+      font-weight: bold;
+      /*color: #333;*/
+      text-align: center;
+      background-color: transparent;
+    }
+    .category-page ul {
+      background-color: transparent;
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+      counter-reset: item; /* 初始化计数器 */
+    }
+
+    /* 分类页面下的文章标题字体样式 */
+    .category-page ul li {
+      background-color: transparent;
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #666;
+      position: relative;
+      padding-left: 1.5em; /* 留出空间显示序号 */
+      counter-increment: item; /* 递增计数器 */
+    }
+
+    .category-page ul li::before {
+      content: counter(item) ". "; /* 显示计数器值 */
+      position: absolute;
+      top: 50%;
+      left: 0; /* 根据需要调整左边距 */
+      transform: translateY(-50%);
+      background-color: transparent;
+      font-weight: bold;
+      color: #333;
+    }
+    /* 分类页面下的文章标题字体样式 */
+    .category-page ul li a {
+      font-size: 20px ;
+      color: #007bff;
+      text-decoration: none;
+      white-space: nowrap; /* 防止换行 */
+      overflow: hidden; /* 隐藏溢出文本 */
+      text-overflow: ellipsis; /* 使用省略号显示溢出文本 */
+      background-color: transparent;
+      display: block;
+      max-width: 100%; /* 根据需要调整最大宽度 */
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+      position: fixed;
+    }
+  </style>
+<body>
+  <header>
+    <!-- Add your header content here -->
+  </header>
+
+  <main>
+    <section class="category-page">
+      <h1>{{ page.title }}</h1>
+      <ul>
+        {% assign category_posts = site.categories[page.category] %}
+        {% for post in category_posts %}
+          <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+          </li>
+        {% endfor %}
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <!-- Add your footer content here -->
+  </footer>
+</body>
+</html>

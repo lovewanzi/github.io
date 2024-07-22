@@ -1,53 +1,222 @@
-body {
-  font-size: 14px !important; /* 全局字体大小 */
-}
-
+/* 选择所有 <code> 元素 */
 h1 {
   font-size: 2.5em !important; /* 一级标题字体大小 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 5px; /* 添加一些内边距 */
+  border-radius: 5px; /* 可选，添加圆角 */
+  margin: 20px 0; /* 添加一些间距 */
 }
 
 h2 {
-  font-size: 2em !important; /* 二级标题字体大小 */
+  font-size: 1.5em !important; /* 二级标题字体大小 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 5px; /* 添加一些内边距 */
+  border-radius: 5px; /* 可选，添加圆角 */
+  margin: 20px 0; /* 添加一些间距 */
 }
 
 h3 {
   font-size: 1.5em !important; /* 三级标题字体大小 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 5px; /* 添加一些内边距 */
+  border-radius: 5px; /* 可选，添加圆角 */
+  margin: 20px 0; /* 添加一些间距 */
 }
 
-/* 选择所有 <code> 元素 */
+
+a {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 18px;
+  /*font-weight: bold;*/
+  color: #007bff;
+  text-decoration: none;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 5px; /* 添加一些内边距 */
+  border-radius: 5px; /* 可选，添加圆角 */
+  margin: 20px 0; /* 添加一些间距 */
+}
+
+a:link {
+  color: #007bff;
+}
+
+a:visited { 
+  color: #5a5a5a;
+}
+
+a:hover {
+  color: #0056b3;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #003d7a;
+}
+
+p {
+  font-size: 18px ;
+  line-height: 1.6; /* 行高 */
+  color: black !important; /* 段落颜色 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 5px; /* 添加一些内边距 */
+  border-radius: 5px; /* 可选，添加圆角 */
+  margin-left: 0px; /* 调整左边距 */
+}
+
+.footer-main {
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* 设置字体家族 */
+  font-size: 16px; /* 设置字体大小 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  font-weight: normal; /* 设置字体粗细 */
+  color: #333; /* 设置字体颜色 */
+  text-align: center; /* 居中对齐 */
+  margin-top: 40px !important; /* 外边距 */
+  padding: 10px; /* 内边距 */
+}
 code {
-    font-size: 14px !important; /* 调整为你需要的字体大小 */
+    font-size: 18px !important; /* 调整为你需要的字体大小 */
 }
 
 /* 选择所有 <pre> 元素 */
 pre {
-    font-size: 14px !important; /* 调整为你需要的字体大小 */
+    font-size: 17px !important; /* 调整为你需要的字体大小 */
 }
 
 /* 选择所有带有 .highlight 类的元素，常用于代码高亮 */
 .highlight {
-    font-size: 14px !important; /* 调整为你需要的字体大小 */
+    font-size: 17px !important; /* 调整为你需要的字体大小 */
 }
 
 /* 如果你的代码块有特定的类名，比如 .code-block */
 .code-block {
-    font-size: 14px !important; /* 调整为你需要的字体大小 */
+    font-size: 17px !important; /* 调整为你需要的字体大小 */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.container {
+  display: flex ; /* 使用 flex 布局 */
+  flex-direction: row; /* 水平排列子元素 */
 }
 
-/*.toc-container {
-    margin-bottom: 20px !important;
+/*侧边栏*/
+.sidebar {
+  position: fixed ; /* 固定在屏幕的最左侧 */
+  width: 250px ; /* 侧边栏宽度 */
+  padding: 20px ;
+  background-color: transparent; /* 背景颜色 */
+  border-right: 0px solid #ddd ; /* 边框颜色 */
+  height: 100vh ; /* 高度为视口高度 */
+  overflow-y: auto ; /* 超出时显示滚动条 */
+  box-sizing: border-box ; /* 包含 padding 和 border */
+  z-index: 1000 ; /* 确保侧边栏在内容上层 */
+  top: 0 ;
+  font-size: 18px !important;
+  color: #A9A9A9 !important;
+  left: -250px; /* 隐藏在左侧 */
+  color: white;
+  transition: left 0.3s ease; /* 平滑过渡效果 */
+}
+/* 侧边栏显示时的样式 */
+.sidebar.show {
+  left: 0; /* 显示在左侧 */
 }
 
-.toc {
-    list-style: none;
-    padding: 0 !important;
+/* 侧边栏触发按钮 */
+.sidebar-toggle {
+  width: 20px; /* 按钮宽度 */
+  height: 20px; /* 按钮高度 */
+  border-radius: 50%; /* 设置为圆形 */
+  position: fixed;
+  top: 5px;
+  left: 5px;
+  background-color: transparent;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 1001; /* 确保按钮在侧边栏之上 */
+  display: flex; /* 使用 flexbox 来居中对齐图标 */
+  justify-content: center; /* 居中对齐水平 */
+  align-items: center; /* 居中对齐垂直 */
+}
+.sidebar a {
+  text-decoration: none; /* 取消下划线 */
+  color: #007bff; /* 设置链接颜色 */
 }
 
-.toc a {
-    text-decoration: none;
-    color: #0073e6 !important;
+.sidebar a:hover {
+  text-decoration: underline; /* 鼠标悬停时显示下划线 */
+  color: #0056b3; /* 鼠标悬停时的颜色 */
+}
+.container > .sidebar {
+  margin-right: 0px; /* 确保侧边栏和内容之间的间距 */
+}
+.main-content {
+  flex: 1;
+  margin-left: -150px; /* 确保内容区域有足够空间避免与侧边栏重叠 */
+  padding: 10px ;
+  box-sizing: border-box ; /* 确保 padding 包含在宽度内 */
+}
+.sidebar.show + .main-content {
+  margin-left: 250px; /* 当侧边栏显示时，主要内容左移 */
+}
+/* 调整主体内容的边距 */
+
+#table-of-contents {
+  margin: 0 ;
+  padding: 0 ;
 }
 
-.toc a:hover {
-    text-decoration: underline !important;
-}*/
+#table-of-contents h2 {
+  font-size: 1.5em ;
+  margin-bottom: 16px;
+}
+
+#table-of-contents ul {
+  list-style-type: none ;
+  padding-left: 0 ;
+}
+
+#table-of-contents li {
+  margin: 5px 0 ;
+}
+/*分类字体*/
+.categories {
+  margin-top: 20px;  /* 调整顶部外边距 */
+  margin-left: auto; /* 自动左边距，将其靠右 */
+  margin-right: auto;/* 自动右边距，将其居中 */
+  padding: 20px;     /* 内边距 */
+  width: 50%;        /* 设置宽度为父元素的50% */
+  background-color: #FFFFFF; /* 背景颜色 */
+}
+/* 分类页面标题的样式 */
+.categories h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 分类列表的样式 */
+.categories ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* 分类项的样式 */
+.categories ul li {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  margin-bottom: 10px;
+  font-size: 20px;
+  color: #666;
+}
+
+/* 分类链接的样式 */
+.categories ul li a {
+  text-decoration: none;
+  color: #007bff;
+}
+
+.categories ul li a:hover {
+  text-decoration: underline;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+

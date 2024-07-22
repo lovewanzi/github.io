@@ -1,1 +1,0 @@
-"---\nlayout: post\ntitle: \"我的新博客\"\ndate: 2024-07-19 12:00:00 +0800\ncategories: [博客, 生活]\ntags: [生活, 随笔]\nauthor: 张三\nimage: \"/assets/images/my-image.jpg\"\n---\n\n# 欢迎阅读我的新博客\n\n在这里，我将分享我的生活随笔和一些有趣的故事。\n\n![描述文字]({{ page.image }})\n\n这里是一些关于我的博客的更多内容。\n\n## 进一步的讨论\n\n在这篇文章中，我将深入探讨一些有趣的话题。" 
