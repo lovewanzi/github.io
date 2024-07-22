@@ -61,7 +61,7 @@ layout: page
         {% endfor %}
     </div>
 {% endif %}
-
+<body>
 <div class="container">
     <!-- 侧边栏 -->
         <!-- 侧边栏 -->
@@ -91,7 +91,8 @@ layout: page
     </main>
 
 </div>
-<script src="assets/js/main.js"></script>
+<script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
 {% if site.post-advance-links contains page.category %}
     <div class="blog-navigation">
         {% if page.previous.hidden == false and page.previous.url %}
