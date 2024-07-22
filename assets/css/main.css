@@ -28,16 +28,11 @@ a {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 18px;
   /*font-weight: bold;*/
-  color: #007bff;
   text-decoration: none;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   padding: 5px; /* 添加一些内边距 */
   border-radius: 5px; /* 可选，添加圆角 */
   margin: 20px 0; /* 添加一些间距 */
-}
-
-a:link {
-  color: #007bff;
 }
 
 a:visited { 
