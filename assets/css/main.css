@@ -146,7 +146,7 @@ pre {
 }
 .main-content {
   flex: 1;
-  margin-left: -50px; /* 确保内容区域有足够空间避免与侧边栏重叠 */
+  margin-left: -20px; /* 确保内容区域有足够空间避免与侧边栏重叠 */
   padding: 10px ;
   box-sizing: border-box ; /* 确保 padding 包含在宽度内 */
 }
