@@ -16,13 +16,16 @@ h2 {
 }
 
 h3 {
-  font-size: 1.5em !important; /* 三级标题字体大小 */
+  font-size: 1.2em !important; /* 三级标题字体大小 */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   padding: 5px; /* 添加一些内边距 */
   border-radius: 5px; /* 可选，添加圆角 */
   margin: 20px 0; /* 添加一些间距 */
 }
 
+.post-page h1, .post-page h2, .post-page h3 {
+   color: white;
+}
 
 a {
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -51,11 +54,17 @@ a:active {
 p {
   font-size: 18px ;
   line-height: 1.6; /* 行高 */
-  color: black !important; /* 段落颜色 */
+  /*color: black;*/ /* 段落颜色 */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
   padding: 5px; /* 添加一些内边距 */
   border-radius: 5px; /* 可选，添加圆角 */
   margin-left: 0px; /* 调整左边距 */
+}
+.post-page p {
+  color: white;
+}
+.post-page p strong{
+   color: white; /* 示例：设置加粗字体颜色为黑色 */
 }
 
 .footer-main {
@@ -95,7 +104,7 @@ pre {
 /*侧边栏*/
 .sidebar {
   position: fixed ; /* 固定在屏幕的最左侧 */
-  width: 250px ; /* 侧边栏宽度 */
+  width: 800px ; /* 侧边栏宽度 */
   padding: 20px ;
   background-color: transparent; /* 背景颜色 */
   border-right: 0px solid #ddd ; /* 边框颜色 */
@@ -106,9 +115,23 @@ pre {
   top: 0 ;
   font-size: 18px !important;
   color: #A9A9A9 !important;
-  left: -250px; /* 隐藏在左侧 */
+  left: -800px; /* 隐藏在左侧 */
   color: white;
   transition: left 0.3s ease; /* 平滑过渡效果 */
+}
+.sidebar h1 {
+  font-size: 1.5em !important;
+  color: black !important; /* Red color for h1 */
+}
+
+.sidebar h2 {
+    font-size: 1.3em !important;
+    color: black; /* Green color for h2 */
+}
+
+.sidebar h3 {
+    font-size: 1.2em !important;
+    color: black !important; /* Blue color for h3 */
 }
 /* 侧边栏显示时的样式 */
 .sidebar.show {
@@ -132,14 +155,43 @@ pre {
   justify-content: center; /* 居中对齐水平 */
   align-items: center; /* 居中对齐垂直 */
 }
-.sidebar a {
-  text-decoration: none; /* 取消下划线 */
-  color: #007bff; /* 设置链接颜色 */
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 1em;
 }
 
-.sidebar a:hover {
-  text-decoration: underline; /* 鼠标悬停时显示下划线 */
-  color: #0056b3; /* 鼠标悬停时的颜色 */
+.sidebar ul ul {
+    margin-left: 1em;
+    list-style-type: disc;
+}
+
+
+.sidebar ul li {
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: fade;
+    max-width: 800px; /* 设置标题的最大宽度 */
+    cursor: pointer; /* 鼠标悬停时显示指针 */
+}
+
+.sidebar ul li:hover::after {
+    content: attr(data-fulltext); /* 显示完整的标题文本 */
+    position: absolute;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    left: 0;
+    top: 100%;
+    z-index: 1000;
+    max-width: none;
+}
+
+.sidebar a {
+  text-decoration: none; /* 取消下划线 */
 }
 .container > .sidebar {
   margin-right: 0px; /* 确保侧边栏和内容之间的间距 */
@@ -151,7 +203,7 @@ pre {
   box-sizing: border-box ; /* 确保 padding 包含在宽度内 */
 }
 .sidebar.show + .main-content {
-  margin-left: 250px; /* 当侧边栏显示时，主要内容左移 */
+  margin-left: 800px; /* 当侧边栏显示时，主要内容左移 */
 }
 /* 调整主体内容的边距 */
 

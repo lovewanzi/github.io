@@ -56,10 +56,10 @@ layout: page
     </div>
 {% endif %}
 <body>
-<div class="container">
+<div class="container post-page">
     <!-- 侧边栏 -->
         <!-- 侧边栏 -->
-    <aside id="sidebar" class="sidebar">
+<!--     <aside id="sidebar" class="sidebar">
         <div id="table-of-contents">
             <h2>目录</h2>
             <ul>
@@ -75,6 +75,48 @@ layout: page
                         <li><a href="#{{ id }}">{{ title }}</a></li>
                     {% endif %}
                 {% endfor %}
+            </ul>
+        </div>
+    </aside> -->
+    <aside id="sidebar" class="sidebar">
+        <div id="table-of-contents">
+            <h2>目录</h2>
+            <ul>
+                {% assign headings = content | markdownify | split: '<h' %}
+                {% assign current_level = 0 %}
+                {% assign levels = "" %}
+                {% for heading in headings %}
+                    {% if heading contains '2>' %}
+                        {% assign level = 2 %}
+                    {% elsif heading contains '3>' %}
+                        {% assign level = 3 %}
+                    {% endif %}
+
+                    {% if level %}
+                        {% assign id = heading | split: 'id="' %}
+                        {% assign id = id[1] | split: '"' %}
+                        {% assign id = id[0] %}
+                        {% assign title = heading | split: '>' %}
+                        {% assign title = title[1] | split: '<' %}
+                        {% assign title = title[0] %}
+
+                        {% if level > current_level %}
+                            {% assign levels = levels | append: "<ul>" %}
+                        {% elsif level < current_level %}
+                            {% assign diff = current_level | minus: level %}
+                            {% for i in (1..diff) %}
+                                {% assign levels = levels | append: "</ul>" %}
+                            {% endfor %}
+                        {% endif %}
+
+                        {% assign levels = levels | append: "<li><a href='#" | append: id | append: "'>" | append: title | append: "</a></li>" %}
+                        {% assign current_level = level %}
+                    {% endif %}
+                {% endfor %}
+                {% for i in (1..current_level) %}
+                    {% assign levels = levels | append: "</ul>" %}
+                {% endfor %}
+                {{ levels }}
             </ul>
         </div>
     </aside>

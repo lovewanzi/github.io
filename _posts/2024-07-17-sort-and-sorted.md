@@ -9,7 +9,7 @@ tag:
 - python
 - python语法
 category: python
-author: jams
+author: 大老师
 description: python的sort和sorted
 ---
 
