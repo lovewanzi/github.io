@@ -64,7 +64,7 @@ p {
   color: white;
 }
 .post-page p strong{
-   color: white; /* 示例：设置加粗字体颜色为黑色 */
+   color: white !important; /* 示例：设置加粗字体颜色为黑色 */
 }
 
 .footer-main {
@@ -77,13 +77,20 @@ p {
   margin-top: 40px !important; /* 外边距 */
   padding: 10px; /* 内边距 */
 }
+.post-page ul li, ol li {
+    color: white !important;
+}
+
 code {
-    font-size: 18px !important; /* 调整为你需要的字体大小 */
+    font-size: 16px !important; /* 调整为你需要的字体大小 */
 }
 
 /* 选择所有 <pre> 元素 */
 pre {
-    font-size: 17px !important; /* 调整为你需要的字体大小 */
+    font-size: 16px !important; /* 调整为你需要的字体大小 */
+    width: 900px !important; /* 设置最大宽度 */
+    /*white-space: pre-wrap;*/ /* 自动换行 */
+    overflow-x: auto;
 }
 
 /* 选择所有带有 .highlight 类的元素，常用于代码高亮 */
@@ -266,4 +273,9 @@ pre {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-
+/* 确保Katex样式优先级更高 */
+body .katex {
+    font-size: 18px !important; /* 你可以调整公式的字体大小 */
+    color: white;  /* 你可以设置公式的颜色 */
+    font-family: 'Times New Roman', Times, serif; /* 你可以设置公式的字体 */
+}

@@ -58,26 +58,6 @@ layout: page
 <body>
 <div class="container post-page">
     <!-- 侧边栏 -->
-        <!-- 侧边栏 -->
-<!--     <aside id="sidebar" class="sidebar">
-        <div id="table-of-contents">
-            <h2>目录</h2>
-            <ul>
-                {% assign headings = content | markdownify | split: '<h' %}
-                {% for heading in headings %}
-                    {% if heading contains '2>' or heading contains '3>' or heading contains '4>' %}
-                        {% assign id = heading | split: 'id="' %}
-                        {% assign id = id[1] | split: '"' %}
-                        {% assign id = id[0] %}
-                        {% assign title = heading | split: '>' %}
-                        {% assign title = title[1] | split: '<' %}
-                        {% assign title = title[0] %}
-                        <li><a href="#{{ id }}">{{ title }}</a></li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>
-    </aside> -->
     <aside id="sidebar" class="sidebar">
         <div id="table-of-contents">
             <h2>目录</h2>
