@@ -27,11 +27,9 @@ layout: compress
                     {left: "\\[", right: "\\]", display: true}
                 ]
             });
-                        // 手动移除所有 .katex-html 元素
             document.querySelectorAll('.katex-html').forEach(function(element) {
                 element.remove();
             });
-                // 移除所有 .katex-display 元素，保留其子元素
             const katexDisplays = document.querySelectorAll('.katex-display');
             katexDisplays.forEach(function(display) {
                 const parent = display.parentNode;
@@ -41,26 +39,22 @@ layout: compress
                 parent.removeChild(display);
             });
 
-                // 移除所有 <math> 元素的 display 属性
             const mathElements = document.querySelectorAll('math[display="block"]');
             mathElements.forEach(function(element) {
                 element.removeAttribute('display');
             });
-
-                        // 确保所有 <mtable> 元素正确显示并左对齐
             const mtableElements = document.querySelectorAll('mtable');
             mtableElements.forEach(function(mtable) {
                 mtable.style.display = 'table';
-                mtable.style.margin = '0 auto'; // 居中显示 <mtable> 元素
+                mtable.style.margin = '0 auto'; 
                 mtable.style.padding = '0';
                 mtable.style.border = 'none';
                 mtable.style.textAlign = 'left';
             });
 
-            // 调整 <mtd> 元素的对齐方式
             const mtdElements = document.querySelectorAll('mtd');
             mtdElements.forEach(function(mtd) {
-                mtd.style.textAlign = 'left'; // 使单元格内容左对齐
+                mtd.style.textAlign = 'left'; 
             });
         });
     </script>
