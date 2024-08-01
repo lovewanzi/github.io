@@ -23,7 +23,15 @@ h3 {
   margin: 20px 0; /* 添加一些间距 */
 }
 
-.post-page h1, .post-page h2, .post-page h3 {
+h4 {
+  font-size: 1em !important; /* 三级标题字体大小 */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+  padding: 5px; /* 添加一些内边距 */
+  border-radius: 5px; /* 可选，添加圆角 */
+  margin: 20px 0; /* 添加一些间距 */
+}
+
+.post-page h1, .post-page h2, .post-page h3, .post-page h4 {
    color: white;
 }
 
@@ -138,6 +146,11 @@ pre {
 
 .sidebar h3 {
     font-size: 1.2em !important;
+    color: black !important; /* Blue color for h3 */
+}
+
+.sidebar h4 {
+    font-size: 1em !important;
     color: black !important; /* Blue color for h3 */
 }
 /* 侧边栏显示时的样式 */
@@ -279,3 +292,95 @@ body .katex {
     color: white;  /* 你可以设置公式的颜色 */
     font-family: 'Times New Roman', Times, serif; /* 你可以设置公式的字体 */
 }
+
+
+/* 默认隐藏折叠项 */
+ul.collapsible {
+    display: block; /* 默认隐藏 */
+    padding-left: 20px; /* 缩进子目录 */
+    margin: 0; /* 移除默认外边距 */
+}
+
+/* 父目录项样式 */
+.toc-item.parent {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block; /* 确保每个目录项为块级元素 */
+}
+
+/* 父目录项的链接样式 */
+.toc-item.parent > a {
+    font-family: 'Open Sans', sans-serif; 
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+    padding: 0px 5px; /* 调整内边距以减少上下间距 */
+    margin: 0; /* 移除默认外边距 */
+    font-size: 17px; /* 设置父目录项的字体大小 */
+    font-weight: normal; /* 设置父目录项的字体粗细 */
+}
+
+/* 子目录项样式 */
+.toc-item.child {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: block; /* 确保每个目录项为块级元素 */
+}
+
+/* 子目录项的链接样式 */
+.toc-item.child > a {
+    text-decoration: none;
+    color: #363636;
+    display: inline-block;
+    padding: 0px 5px; /* 调整内边距以减少上下间距 */
+    margin: 0; /* 移除默认外边距 */
+    font-size: 15px; /* 设置子目录项的字体大小 */
+    font-weight: normal; /* 设置子目录项的字体粗细 */
+    font-family: 'Lato', sans-serif;
+}
+
+/* 2级子目录样式 */
+.toc-level-2.child > a {
+    font-family: 'Open Sans', sans-serif; 
+    text-decoration: none;
+    color: #000000;
+    display: inline-block;
+    padding: 0px 5px; /* 调整内边距以减少上下间距 */
+    margin: 0; /* 移除默认外边距 */
+    font-size: 17px; /* 设置父目录项的字体大小 */
+    font-weight: normal; /* 设置父目录项的字体粗细 */
+}
+
+.toc-level-3 > a,
+.toc-level-4 > a,
+.toc-level-5 > a {
+    text-decoration: none;
+    color: #363636;
+    display: inline-block;
+    padding: 0px 5px; /* 调整内边距以减少上下间距 */
+    margin: 0; /* 移除默认外边距 */
+    font-size: 15px; /* 设置子目录项的字体大小 */
+    font-weight: normal; /* 设置子目录项的字体粗细 */
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* 折叠按钮样式 */
+.collapse-button {
+    cursor: pointer;
+    color: #000000;
+    font-size: 0.8em;
+    margin-right: 0;
+    margin-top: 0; /* 移除顶部和底部外边距 */
+    margin-bottom: 0;
+}
+
+.no-collapse-button {
+    display: inline-block;
+    width: 0;
+    margin-right: 5px;
+}
+
+

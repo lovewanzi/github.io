@@ -19,6 +19,28 @@ layout: compress
     <script src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" defer></script>
     <script>
         document.addEventListener("DOMContentLoaded", function() {
+        const items = document.querySelectorAll('.toc-item');
+    items.forEach(item => {
+        const button = item.querySelector('.collapse-button');
+        const parentLi = item.parentElement;
+        const parentUl = item.querySelector('ul.collapsible');
+        if (button && parentUl) {
+            parentUl.style.display = 'none';
+            button.textContent = '>';
+
+            button.addEventListener('click', function() {
+                if (parentUl.style.display === 'none') {
+                    parentUl.style.display = 'block';
+                    button.textContent = 'v';
+                } else {
+                    parentUl.style.display = 'none';
+                    button.textContent = '>';
+                }
+            });
+        } else if (button) {
+            button.remove();
+        }
+    });
             renderMathInElement(document.body, {
                 delimiters: [
                     {left: "$$", right: "$$", display: true},
@@ -102,5 +124,6 @@ layout: compress
                 </div>
             </div>
     </div>
+    <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
