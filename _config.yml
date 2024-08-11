@@ -33,11 +33,11 @@ disqus:
   shortname: github # enter this from your disqus account
   categories: [python, 生活] # only show disqus for posts that have these categories
 # if you don't have any of social below, comment the line
-# facebook: myfacebook
-# twitter: mytwitter
-# instagram: myinstagram
-# linkedin: mylinkedin
-github: lovewanzi/lovewanzi.github.io.git
+facebook: myfacebook
+twitter: D7JmaZ8tzRCdR48
+instagram: myinstagram
+linkedin: mylinkedin
+github: shenweichen/DeepCTR
 email: hsiungrui@gmail.com
 
 authors:
