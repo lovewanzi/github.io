@@ -17,6 +17,8 @@ description: python的collections详解
 4. **`OrderedDict`**：有序字典，字典子类，记住了添加键值对的顺序。
 5. **`defaultdict`**：带有默认值的字典。
 
+**注意：**时间复杂度为`O(1)`，因为底层是双链表。
+
 ## namedtuple
 
 `namedtuple` 是一个工厂函数，用于创建带字段名的元组子类。
@@ -109,6 +111,31 @@ for key, value in od.items():
 ## defaultdict
 
 `defaultdict` 是一个带有默认值的字典，当访问的键不存在时，会返回一个默认值。
+
+**注意：**当键不存在，会将这个键存入`key`，并赋予一个默认值。
+
++ ~~~python
+  import collections
+  
+  if __name__ == '__main__':
+      dic = collections.defaultdict(list)
+      dic[3] = [2]
+      print(dic)
+      print(dic[1])
+      print(dic)
+      print(2 in dic)
+      for k in dic[2]:
+          print(k)
+      print(dic)
+      print(2 in dic)
+      # 输出
+      # defaultdict(<class 'list'>, {3: [2]})
+      # []
+      # defaultdict(<class 'list'>, {3: [2], 1: []})
+      # False
+      # defaultdict(<class 'list'>, {3: [2], 1: [], 2: []})
+      # True
+  ~~~
 
 ```python
 from collections import defaultdict

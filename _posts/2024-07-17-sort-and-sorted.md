@@ -17,7 +17,7 @@ description: python的sort和sorted
 #“key”参数的函数只是提供排序依据，即按照函数计算列表中的值来作为排序的依据，并不会改变原列表的元素值。
 #如下面一段代码
 a = [2, 4, 6]
-	def func(x):  
+def func(x):  
 	return x // 2
 a.sort(key= func, reverse=True)
 print(a) 
